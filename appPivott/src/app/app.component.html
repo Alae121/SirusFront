@@ -1,0 +1,11 @@
+<app-account *ngIf="session; else auth" [session]="session"></app-account>
+<div class="" style="">
+  <ng-template #auth  >
+    <app-auth *ngIf="router.url!=='/sign-up'">
+    </app-auth>
+    <app-sign-up *ngIf="router.url==='/sign-up'">
+
+    </app-sign-up>
+  </ng-template>
+
+</div>
